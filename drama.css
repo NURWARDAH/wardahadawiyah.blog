@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('image/tata.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background: none;
+    border-bottom: 2px none;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #f4f0ed;
+}
+
+nav button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: none;
+    color: #601b1b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #555;
+}
+
+.drama {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image-text {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: none;
+    color: rgb(44, 16, 10);
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.drama img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px run;
+    transition: transform 0.3s ease-in-out;
+}
+
+.drama img:hover {
+    transform: scale(1.1);
+}
+.navbar {
+    width: 88%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
