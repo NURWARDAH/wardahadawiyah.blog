@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="facts.html">FACTS</a></li>
+            </ul>
+        </div>
+        <h1>MY FAVOURITE MUSIC<br>PLAYED BY PROFESSIONAL VIOLINIST</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="video/raychen.jpg" width="100%">
+                    <img src="playbtn.png" class="play-btn"
+                    onclick="playVideo('video/RayChenVivaldiWinter.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="video/sohyun.jpg" width="100%">
+                        <img src="video/playbtn.png" class="play-btn"
+                        onclick="playVideo('video/SoHyunKo.mp4')">
+                    </div>
+                    <p><b>SOHYUN KO</b><br>I would love to show people her playing like a legend when she's still in her teenager.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="video/hilary.jpg" width="100%">
+                        <img src="video/playbtn.png" class="play-btn"
+                        onclick="playVideo('video/HilaryHanh.mp4')">
+                    </div>
+                    <p><b>HILARY HAHN</b><br>She's a queen, makes everyone drooling while watching her performance.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="video/brett.jpg" width="100%">
+                        <img src="playbtn.png" class="play-btn"
+                        onclick="playVideo('video/BrettYang.mp4')">
+                    </div>
+                    <p><b>BRETT YANG</b>He's not gifted with a perfect pitch like his bestie, but he's always shining on the stage no matter performing as a solo or duo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="" type="video/mp4">
+        </video>
+        <img src="image/close.png" class="close-btn" 
+        onclick="stopVideo()">
+    </div>
+
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+        videoPlayer.style.display = "none";
+        myVideo.pause();
+    }
+
+    function playVideo(file){
+        myVideo.src = file;
+        videoPlayer.style.display = "block";
+        myVideo.play();
+    }
+</script>
+
+</body>
+</html>

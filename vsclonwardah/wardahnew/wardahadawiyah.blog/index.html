@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDAH'swebsite/IML470.individualassignment/coding</title>
+    <link rel="stylesheet" href="indexhome.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="image/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="facts.html">FACTS</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-col">
+                <h1>WELCOME<br>TO MY<br>WEBSITE</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="image/play.png" id="icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="mysong">
+        <source src="image/song.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            if (mysong.paused) {
+                mysong.play();
+                icon.src = "image/pause.png";
+            } else {
+                mysong.pause();
+                icon.src = "image/play.png";
+            }
+        }
+    </script>
+</body>
+</html>
